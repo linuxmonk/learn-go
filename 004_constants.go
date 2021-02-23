@@ -46,4 +46,33 @@ func main() {
 	fmt.Printf("Millisecond: %20v, type %T\n", Millisecond, Millisecond)
 	fmt.Printf("Microsecond: %20v, type %T\n", Microsecond, Microsecond)
 	fmt.Printf("Nanosecond:  %20v, type %T\n", Nanosecond, Nanosecond)
+
+	fmt.Println("iota tests")
+	iotaTest()
+}
+
+func iotaTest() {
+	const (
+		A1 = iota // starts at 0
+		A2        // increments to 1
+		A3        // increments to 2
+	)
+
+	const (
+		A4 = iota + 10 // starts at 10
+		A5             // increments to 11
+		A6             // increments to 12
+	)
+
+	const (
+		One = 1 << iota
+		Two
+		Four
+		Eight
+		Sixteen
+	)
+
+	fmt.Println("A1, A2, A3", A1, A2, A3)
+	fmt.Println("A4, A5, A6", A4, A5, A6)
+	fmt.Println("One, Two, Four, Eight, Sixteen", One, Two, Four, Eight, Sixteen)
 }
