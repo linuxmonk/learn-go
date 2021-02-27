@@ -10,3 +10,8 @@ Interface Pollution
   * When it's not providing support for the API to decouple changes.
   * When its not clear how the interface makes the code better.
 
+
+Good Design Choices
+
+* Keep interfaces small
+* Use composition when required
