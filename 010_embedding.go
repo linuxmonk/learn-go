@@ -25,13 +25,16 @@ func (ad admin) print() {
 	fmt.Printf("Admin: %s<%s>, level: %s\n", ad.user.name, ad.user.email, ad.level)
 }
 
-func (u user) notify() {
+func (u *user) notify() {
 	fmt.Printf("User %s has been notified.\n", u.name)
 }
 
 func main() {
 	sep("Example to demonstrate how embedding exposes the inner types methods directly")
 	typeEmbedding()
+	sep("Example to demonstrate inner type promotion by invoking a polymorphic function")
+	innerTypePromotion()
+	fmt.Println("NOTE: If outer type and inner type implements the same interface. Then there will be no type promotion for that interface")
 }
 
 func typeEmbedding() {
@@ -48,6 +51,21 @@ func typeEmbedding() {
 	ad.user.notify()
 	fmt.Println("admin embeds user. Calling user method from admin (Direct invocation):")
 	ad.notify()
+}
+
+func innerTypePromotion() {
+	ad := admin{
+		user: user{
+			name:  "Bob",
+			email: "bob@admin.noreply.com",
+		},
+		level: "superuser",
+	}
+	sendNotification(&ad)
+}
+
+func sendNotification(n notifier) {
+	n.notify()
 }
 
 func sep(heading string) {
