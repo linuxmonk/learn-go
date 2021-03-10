@@ -31,7 +31,7 @@ A profiler runs your program and configures the OS to interrupt the process at r
   - Read about [stack traces here](./stack_traces_and_coredumps/stack_trace.md)
   - Read about [core dumps here](./stack_traces_and_coredumps/core_dump.md)
 - Read about [Benchmarking for micro level optimizations](./benchmarks/benchmarks.md)
-- GODEBUG
+- Read about [GODEBUG and using it for macro level optimizations](./godebug/godebug.md)
 - Memory and CPU profiling
 - pprof profiling (http/pprof)
 - Blocking profiling
