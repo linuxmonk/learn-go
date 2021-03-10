@@ -27,7 +27,9 @@ A profiler runs your program and configures the OS to interrupt the process at r
 
 ## Basic Go Profiling
 
-- Stack Traces and Core Dumps [here](./stack_traces_and_coredumps/stack_trace.md)
+- Stack Traces and Core Dumps 
+  - Read about [stack traces here](./stack_traces_and_coredumps/stack_trace.md)
+  - Read about [core dumps here](./stack_traces_and_coredumps/core_dump.md)
 - GODEBUG
 - Memory and CPU profiling
 - pprof profiling (http/pprof)
