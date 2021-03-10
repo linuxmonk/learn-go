@@ -4,7 +4,7 @@
 
 ### Scheduler Tracing
 
-`Setting `GODEBUG=schedtrace=1000 ./run/your/binary` will display a scheduler trace every 1000 milliseconds (1sec). Here if we do a load test we can see the output of how many goroutines are in idle state, how many are in spinning state, and number of logical processors and the the state of the local run queue.
+Setting `GODEBUG=schedtrace=1000 ./run/your/binary` will display a scheduler trace every 1000 milliseconds (1sec). Here if we do a load test we can see the output of how many goroutines are in idle state, how many are in spinning state, and number of logical processors and the the state of the local run queue.
 
 ### Memory Tracing
 
